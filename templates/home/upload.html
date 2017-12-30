@@ -1,0 +1,45 @@
+{% extends "generic/base/skelton.html" %}
+{% block title %}QuickLink{% endblock %}
+{% block style %}
+{% endblock %}
+{% block script %}
+{% endblock %}
+{% block body %}
+{% include "generic/include/navbar.html" %}
+<div class="container" id="batch-upload">
+    {% if show_upload %}
+    <h3>Input should be in format</h3>
+    <div class="row">
+        <div class="alert alert-info" role="alert">name~site~country~solution~testdirect~testindirect~systdirect~systindirect~proddirect~prodindirect</div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <form method="post" action="" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="{{ form.file.id_for_label }}">{{ form.file.label }}</label>
+                    {{ form.file }}
+                </div>
+                <div class="checkbox">
+                    <label>
+                        {{ form.update_existing }} {{ form.update_existing.label }}
+                    </label>
+                </div>
+                <button class="btn btn-primary" type="submit">Load</button>
+            </form>
+        </div>
+    </div>
+    {% endif %}
+    
+    {% if show_result %}
+    <div class="container-fluid">
+        <h3>Batch Upload Result:</h3>
+        <textarea disabled class="form-control" rows="20"> 
+        {% for item in batch_output %}
+            {{ item }}
+        {% endfor %}
+        </textarea>
+    </div>    
+    {% endif %}
+</div>
+{% endblock %}

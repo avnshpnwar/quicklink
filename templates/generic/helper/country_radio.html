@@ -1,0 +1,7 @@
+{% for c in all_country %} 
+{% if forloop.first %}
+<label class="btn btn-sm btn-outline-danger form-control active" title="{{ c.country }}" id="labelCountry{{ c.code }}"><input name="country" id="radioCountry{{ c.code }}" value="{{ c.country }}" type="radio">{{ c.code }}</label>
+{% else %}
+<label class="btn btn-sm btn-outline-danger form-control" title="{{ c.country }}" id="labelCountry{{ c.code }}"><input name="country" id="radioCountry{{ c.code }}" value="{{ c.country }}" type="radio">{{ c.code }}</label>
+{% endif %}
+{% endfor %}

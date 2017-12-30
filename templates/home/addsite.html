@@ -1,0 +1,23 @@
+{% extends "generic/base/skelton.html" %}
+{% block title %}Logon{% endblock %}
+{% block style %}
+{% endblock %}
+{% block script %}
+{% endblock %}
+{% block body %}
+{% include "generic/include/navbar.html" %}
+<div class="container-fluid">
+  <form class="form-horizontal offset-sm-3 col-sm-6 col-xs-12" action="" method="post" id="login-form">
+    <h2 style="margin-bottom: 10px;">Add Site</h2>
+    <hr>
+    {% csrf_token %}
+    {% include "generic/include/bs4_v02.html" with form=form label_class="col-sm-3" field_class="col-sm-9" %}
+        <div class="form-group">
+            <div class="offset-sm-3 col-sm-9">
+                <button type="submit" class="btn btn-primary">Add Site</button>
+                <a class="btn btn-dark" href="/QuickLink/home/" role="button">Cancel</a>
+            </div>
+        </div>
+  </form>
+</div>
+{% endblock %}

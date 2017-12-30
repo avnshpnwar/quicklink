@@ -1,0 +1,52 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+
+    <div class="container">
+    
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+            </button>
+            <a id="myBrand" class="navbar-brand" href="#">Q U I C K L I N K</a>
+        </div>
+        
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+        
+            {% if not hide_navbar_content %} <!-- hide navbar content -->
+                <!-- choice between recent and all sites -->
+               <!--  <div class="nav navbar-nav navbar-left btn-group navbar-btn" id="choiceGroup">
+                    <a href="/QuickLink/home/recentsite/" class="btn btn-primary {{ recentclass }}" style="min-width: 75px;{% if hide_recent_button %}visibility: hidden;{% endif %}" id="recentSite">Recent</a>
+                    <a href="/QuickLink/home/allsite/" class="btn btn-primary {{ allclass }}" style="min-width: 75px;{% if hide_recent_button %}visibility: hidden;{% endif %}" id="allSite">All Sites</a>
+                </div> -->
+                <div class="nav navbar-left btn-group navbar-btn" data-toggle="buttons" id="choiceGroup">
+                    <label class="btn btn-primary active" id="recentSiteButton" title="Recent Sites" style="min-width: 76px;{% if hide_recent_button %}visibility: hidden;{% endif %}">
+                        <input name="recentsite" value="recentsite" type="radio">Recent
+                    </label>
+                    <label class="btn btn-primary" id="allSiteButton" title="All Sites"  style="min-width: 76px;{% if hide_recent_button %}visibility: hidden;{% endif %}">
+                        <input name="allsite"  value="allsite" type="radio" >All Sites
+                    </label>
+                </div>
+                
+                <div class="navbar-left btn-group navbar-btn authClassCountry formadjust" data-toggle="buttons" id="countryButtonGroup">
+                    {% include "generic/include/country_radio_s.html" %}                
+                </div>
+                {% include "generic/include/nav_select_s.html" %}
+            {% endif %}
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/QuickLink/home/"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/QuickLink/home/addsite/"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Add Site</a></li>
+                        <li><a href="/QuickLink/home/modtable/"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Edit Site</a></li>
+                        <li role="separator" class="divider"></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

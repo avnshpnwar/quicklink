@@ -1,0 +1,42 @@
+<nav class="navbar fixed-top navbar-dark navbar-expand-xl bg-dark justify-content-center">
+    <a href="/QuickLink/home" style="min-width: 60px;" class="navbar-brand d-flex mr-auto">Q Link</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbar-collapse">
+        {% if not hide_navbar_content %} <!-- hide navbar content -->
+            <!-- choice between recent and all sites -->
+            <div class="nav navbar-nav mx-auto w-100 justify-content-center">
+                <div class="form-inline">
+                    <div class="btn-group" data-toggle="buttons" id="choiceGroup">
+                        <label class="btn btn-outline-primary active btn-sm form-control" id="recentSiteButton" title="Recent Sites" style="min-width: 76px;{% if hide_recent_button %}visibility: hidden;{% endif %}">
+                            <input name="recentsite" value="recentsite" type="radio">Recent
+                        </label>
+                        <label class="btn btn-outline-primary btn-sm form-control" id="allSiteButton" title="All Sites"  style="min-width: 76px;{% if hide_recent_button %}visibility: hidden;{% endif %}">
+                            <input name="allsite"  value="allsite" type="radio" >All Sites
+                        </label>
+                    </div>
+                </div>
+                <div class="form-inline">
+                    <div class="btn-group ml-lg-2" data-toggle="buttons" id="countryButtonGroup">
+                        {% include "generic/include/country_radio_s.html" %}                
+                    </div>
+                </div>
+                {% include "generic/include/nav_select_s.html" %}
+            </div>
+        {% endif %}
+        <ul class="nav navbar-nav ml-auto" style="min-width: 60px;">
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"><span class="oi oi-cog"></span></a>
+            <div class="dropdown-menu dropdown-menu-right bg-dark  mob-menu-width custom-table">
+                <a class="dropdown-item bg-dark" style="color:white;" href="/QuickLink/home/"><span class="oi oi-home"></span>&nbsp;&nbsp;Home</a>
+                <div class="dropdown-divider  navbar-dark bg-dark"></div>
+                <a class="dropdown-item bg-dark" style="color:white;" href="/QuickLink/home/addsite/"><span class="oi oi-plus"></span>&nbsp;&nbsp;AddSite</a>
+                <a class="dropdown-item bg-dark" style="color:white;" href="/QuickLink/home/modtable/"><span class="oi oi-pencil"></span>&nbsp;&nbsp;EditSite</a>
+                <div class="dropdown-divider  navbar-dark bg-dark"></div>
+                <a class="dropdown-item bg-dark" style="color:white;" href="/QuickLink/home/help/"><span class="oi oi-question-mark"></span>&nbsp;&nbsp;FAQ</a>
+            </div>
+            </li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %} {% endblock %} </title>
+    {% block favicon %}
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ STATIC_URL }}images/favicon.ico" />
+    {% endblock %}
+    <!-- Style -->
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/bootstrap-reboot.min.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/open-iconic-bootstrap.min.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/main.css" rel="stylesheet">
+    <!-- Script -->  
+    <script src="{{ STATIC_URL }}js/jquery-3.2.1.min.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery.dataTables.min.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap.bundle.min.js"></script>
+    <script src="{{ STATIC_URL }}js/dataTables.bootstrap4.min.js"></script>
+    {% block style %} {% endblock %}
+    {% block script %} {% endblock %}
+  </head>
+  <body>
+    {% block body %} {% endblock %}
+  </body>
+</html>

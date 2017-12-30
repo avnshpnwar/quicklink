@@ -1,0 +1,26 @@
+<div class="form-inline my-2 my-xl-0">
+    <select class="form-control form-control-sm uglydropdown ml-xl-2 mob-menu-width" id="countryDropList">
+        {% for c in all_country %}
+            <option value="{{ c.country }}">{{ c.country }}</option>
+        {% endfor %}
+    </select> 
+</div>
+<div class="form-inline  my-2 my-xl-0">
+    <select class="form-control form-control-sm uglydropdown ml-xl-2 mob-menu-width" id="categoryList">
+        {% for c in all_category %}
+        <option value="{{ c.category }}">{{ c.category }}</option>
+        {% endfor %}
+    </select>
+</div>
+<div class="form-inline my-2 my-xl-0"> 
+    <select class="form-control form-control-sm uglydropdown ml-xl-2 mob-menu-width" id="solutionList">
+        {% for s in all_solution %}
+        <option value="{{ s.solution }}">{{ s.solution }}</option>
+        {% endfor %}
+    </select>
+</div>
+<div class="form-inline my-2 my-xl-0">
+    <button class="btn btn-warning btn-sm resetTable form-control ml-xl-2 mob-menu-width" type="button" title="Reset Table" id="resetButton">
+        <span class="oi oi-reload"></span>
+    </button>
+</div>

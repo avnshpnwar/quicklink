@@ -1,0 +1,135 @@
+{% extends "generic/base/skelton.html" %}
+{% block title %}QuickLink{% endblock %}
+{% block style %}
+<style>
+    .faqHeader {
+        font-size: 27px;
+        margin: 20px;
+    }
+</style>
+{% endblock %}
+{% block script %}
+{% endblock %}
+{% block body %}
+{% include "generic/include/navbar.html" %}
+<div class="container">
+
+
+
+
+
+
+
+
+    <div class="" id="accordion">
+        <div class="faqHeader">About QuickLink?</div>
+        <div class="card ">
+            <div class="card-header">
+                <h6 class="card-header">
+                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse001">What is QuickLink ?</a>
+                </h6>
+            </div>
+            <div id="collapse001" class="panel-collapse collapse">
+                <div class="card-body">
+                    QuickLink is a web application which store all useful site required by most of developers. You can quickly visit any site in Test, Syst and Prod using 
+                    quicklink.
+                </div>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-header">
+                <h6 class="card-header">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse002">What are QuickLink mode?</a>
+                </h6>
+            </div>
+            <div id="collapse002" class="panel-collapse collapse">
+                <div class="card-body">
+                    QuickLink run in two mode.
+                    <ol>
+                    	<li><b>Recent Site Mode:</b> This mode store recent site visite by you. By default QuickLink will show you this page.</li>
+                    	<li><b>All Site Mode:</b>This mode store all site available in QuickLink.</li>
+                    </ol>
+                    You can switch between these mode using Blue buttons available in navbar.
+                </div>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-header">
+                <h6 class="card-header">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse003">What are QuickLink filters ?</a>
+                </h6>
+            </div>
+            <div id="collapse003" class="panel-collapse collapse">
+                <div class="card-body">
+                    You can easily filter site you required by using QuickLink filters. Currently QuickLink has these filters.
+                    <ul>
+                    	<li><b>Country:</b> Site filter based on country. e.g. India, Australia</li>
+                    	<li><b>Category:</b>Site filter based on site type. e.g. eBanking, Phone Banking</li>
+                    	<li><b>Solution:</b>Site filter based on solution type. e.g Google, Facebook</li>
+                    </ul>
+                    Apart from this their is search box, which can easily filter site.
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="faqHeader">Adding, Editing and Deleting sites.</div>
+        <div class="card ">
+            <div class="card-header">
+                <h6 class="card-header">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse005">How to add Site ?</a>
+                </h6>
+            </div>
+            <div id="collapse005" class="panel-collapse collapse">
+                <div class="card-body">
+                    Click on wheel button on right hand site of navbar. Choose option to add site, fill the form and submit it. You won't be able to add site if site name or URL 
+                    already exist in QuickLink.
+                </div>
+            </div>
+        </div>
+        <div class="card ">
+            <div class="card-header">
+                <h6 class="card-header">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse006">How to to edit or delete site?</a>
+                </h6>
+            </div>
+            <div id="collapse006" class="panel-collapse collapse">
+                <div class="card-body">
+                    Click on wheel button on right hand site of navbar. Choose option to edit site, this will show you all sites in tabular format. Filter the site you 
+                    want to edit/delete. Once you find your site click on Edit or Delete button. You will be represented by a form. 
+                </div>
+            </div>
+        </div>
+        
+		<div class="faqHeader">QuickLink Tips and Tricks.</div>
+		<div class="card ">
+            <div class="card-header">
+                <h6 class="card-header">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse004">In QuickLink world refresh is bad</a>
+                </h6>
+            </div>
+            <div id="collapse004" class="panel-collapse collapse">
+                <div class="card-body">
+                    To reset filter you don't need to click refresh again and again. You can simpley use Reset button. Refresh will fetch data from server, while Reset 
+                    will use data already present in DOM, and thus is more fast and cheap.
+                </div>
+            </div>
+        </div>
+        
+        <div class="faqHeader">Code Development</div>
+        <div class="card ">
+            <div class="card-header">
+                <h6 class="card-header">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse007">Where is source code?</a>
+                </h6>
+            </div>
+            <div id="collapse007" class="panel-collapse collapse">
+            	<div class="card-body">
+                	QuickLink is written in Django.
+                	Source code is in <a href="https://github.com/avnshpnwar/quicklink">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

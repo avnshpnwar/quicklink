@@ -1,0 +1,10 @@
+body {
+	font-family: Verdana;
+	background: #eee;
+}
+
+.helpDiffer {
+	font-family: monospace;
+	color: teal;
+	font-style: italic;
+}

@@ -1,0 +1,120 @@
+/* for static fixed navbar provide padding for body */
+body {
+	padding-top: 70px;
+}
+
+/* select between radiobutton and drop down on basis of media */
+@media ( max-width : 1200px) {
+	#countryDropList{
+		display: inline-block;
+	}
+	#countryButtonGroup, .hiderow {
+		display: none;
+	}
+	#urltable_filter > label > input {
+		min-width: 250px;
+	}
+	.mob-menu-width {
+		max-width: 250px !important;
+		min-width: 250px !important;
+	}
+}
+
+@media ( min-width : 1200px) {
+	#countryDropList{
+		display: none;
+	}
+	#countryButtonGroup {
+		display: inline-block;
+	}
+	#urltable_filter > label > input {
+		min-width: 350px;
+	}
+}
+
+@media ( max-width : 576px) {
+	.mob-menu-width {
+	max-width: 250px !important;
+	}
+}
+
+
+
+/* default bootstrap table is big, reduce it */
+.custom-table {
+	line-height: 1 !important; 
+	font-size: 0.90rem !important;
+}
+.oi-account-login {
+	font-size: 1.04rem;
+}
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  margin: -50px 0 0 -50px;
+  border: 2px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 2px solid #bfbfbf;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+ .btn-sm {
+	box-shadow: none !important;
+ }
+.form-control {
+	box-shadow: none !important;
+ }
+.versionInfo {
+	font-size: xx-small;
+	color: graytext;
+	font-family: monospace;
+}
+
+.mirrorButton {
+	-webkit-appearance: none;
+	outline: none;
+	border: 0;
+	background: transparent;
+}
+
+/* remove ugly down arrow in mozilla */
+@-moz-document url-prefix() {
+    button, select { 
+	    -moz-appearance:none;
+	    cursor:pointer;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		background-position: right 8px center;
+		background-repeat: no-repeat;
+	}
+	.uglydropdown {
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAK5JREFUOI3lzz9LgmEUhvFf4B9SRJJmaYgGabEpP0z04RyaHBwcHISGBiFEcAo3ESQoULBdlyO8hL2+4pb39HDu6zqch3+Vi1PYZ3ygnkG+wRRPyW0TbDDDbYp8h3mwo2RxjXEUCzT2yPf4DOYdtd/AFYYBfKGZ6B7wHd0bqn+dWMFrgEs8ooVVzAYop3wRlNAPYY2fePdweUjepYhuiBt0UMgq75LHC9rIHSufU7YS5SQmW4tzCAAAAABJRU5ErkJggg==);
+	}
+	div.dataTables_length select {
+    	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAK5JREFUOI3lzz9LgmEUhvFf4B9SRJJmaYgGabEpP0z04RyaHBwcHISGBiFEcAo3ESQoULBdlyO8hL2+4pb39HDu6zqch3+Vi1PYZ3ygnkG+wRRPyW0TbDDDbYp8h3mwo2RxjXEUCzT2yPf4DOYdtd/AFYYBfKGZ6B7wHd0bqn+dWMFrgEs8ooVVzAYop3wRlNAPYY2fePdweUjepYhuiBt0UMgq75LHC9rIHSufU7YS5SQmW4tzCAAAAABJRU5ErkJggg==);
+	}
+	select:-moz-focusring {
+		color: transparent;
+    	text-shadow: 0 0 0 #555;
+	}
+	#solutionList {
+		min-width: 200px;
+	}
+}

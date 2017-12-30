@@ -1,0 +1,22 @@
+{% extends "generic/base/skelton.html" %}
+{% block title %}Logon{% endblock %}
+{% block style %}
+<link href="{{ STATIC_URL }}css/logon.css" rel="stylesheet">
+{% endblock %}
+{% block script %}
+<script src="{{ STATIC_URL }}js/jquery.validate.min.js"></script>
+<script src="{{ STATIC_URL }}js/jquery-validate.bootstrap-tooltip.min.js"></script>
+<script src="{{ STATIC_URL }}js/changepwd.js"></script>
+{% endblock %}
+{% block body %}
+{% include "generic/include/navbar.html" %}
+<div class="container">
+  <form id="changepwd-form" class="form-signin" action="" method="post">
+    <h2 class="form-signin-heading">Change password</h2>
+    <hr>
+    {% csrf_token %}
+    {% include "generic/include/bs4_v01.html" with form=form %}
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Change password</button>
+  </form>
+</div>
+{% endblock %}

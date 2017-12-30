@@ -1,0 +1,23 @@
+{% extends "generic/base/skelton.html" %}
+{% block title %}Logon{% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/logon.css">
+{% endblock %}
+{% block script %}
+<script src="{{ STATIC_URL }}js/jquery.validate.min.js"></script>
+<script src="{{ STATIC_URL }}js/jquery-validate.bootstrap-tooltip.min.js"></script>
+<script src="{{ STATIC_URL}}js/logon.js"></script>
+{% endblock %}
+{% block body %}
+{% include "generic/include/navbar.html" %}
+<div class="container">
+  <form class="form-signin" action="" method="post" id="login-form">
+    <h2 class="form-signin-heading">Sign in</h2>
+    <hr>
+    {% csrf_token %}
+    {% include "generic/include/bs4_v01.html" with form=form %}
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <span class="help-block" style="font-size: 13px;">Don't have account !!! <a href="/QuickLink/auth/register/">Register Here</a></span>
+  </form>
+</div>
+{% endblock %}
