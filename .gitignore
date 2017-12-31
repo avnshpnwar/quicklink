@@ -82,4 +82,8 @@ local.properties
 stat
 # don't track generate static file
 templates/**/*_s.html
+# don't track temporary scratchpad
 scratch.py
+# don't track migrations
+**/migrations/*.py
+!**/migrations/__init_.py
