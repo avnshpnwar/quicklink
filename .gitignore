@@ -78,8 +78,6 @@ local.properties
 
 # End of https://www.gitignore.io/api/pydev,django,eclipse
 
-# don't track file inside stat folder
-stat
 # don't track generate static file
 templates/**/*_s.html
 # don't track temporary scratchpad
