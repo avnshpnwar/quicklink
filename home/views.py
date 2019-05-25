@@ -1,6 +1,6 @@
 import logging
 
-from django.db.models.functions.base import Lower
+from django.db.models.functions import Lower
 from django.http.response import Http404  # @UnusedImport
 from django.http.response import JsonResponse
 from django.shortcuts import render, redirect

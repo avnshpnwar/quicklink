@@ -1,7 +1,7 @@
 from logging import getLogger
 import os
 
-from django.db.models.functions.base import Lower
+from django.db.models.functions import Lower
 from django.template.loader import render_to_string
 
 from .models import Category, Country, Solution, AllSites, UserRecentSite
